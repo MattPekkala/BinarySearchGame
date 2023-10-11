@@ -1,0 +1,36 @@
+import './style.css'
+import {TextInterface} from './textInterface';
+
+const ti = new TextInterface();
+ti.outputAnimationLength
+
+
+
+ti.setTitle('Guess That State!!!!!!!!!!!!!!!!!!!');
+ti.output('Think of a United State. I will try to guess it. Ready?');
+await ti.readText();
+ti.clear();
+ti.output('What region of the Us is it in?');
+let region = await ti.readChoice(['North East','South','Midwest','West',])
+if (region == 'North East') {
+  ti.clear();
+  ti.output('Is it a part of New England?');
+
+  let newEngland = await ti.readYesOrNo ()
+  if (newEngland == true){
+    
+  }else{
+    
+  }
+}
+if (region == 'South'){
+  ti.clear();
+  ti.output();
+}
+if (region == 'Midwest') {
+  ti.clear();
+  ti.output()
+}
+if (region == 'West') {
+  
+}
